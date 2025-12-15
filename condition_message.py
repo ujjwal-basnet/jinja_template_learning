@@ -12,7 +12,7 @@ students = [
 ]
 
 for student in students:
-    filename = Path(f"output/with_if_else/message_{student['name'].lower()}.txt")
+    filename = Path(f"outputs/with_if_else/message_{student['name'].lower()}.txt")
     filename.parent.mkdir(parents=True, exist_ok=True)
 
     content= template.render(**student)

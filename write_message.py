@@ -15,7 +15,7 @@ environment= Environment(loader= FileSystemLoader("templates/"))
 template= environment.get_template("message.txt")
 
 for student in students: 
-    filename = Path(f"output/basic/message_{student['name'].lower()}.txt")
+    filename = Path(f"outputs/basic/message_{student['name'].lower()}.txt")
     filename.parent.mkdir(parents=True, exist_ok=True)
     content= template.render(
         student,
